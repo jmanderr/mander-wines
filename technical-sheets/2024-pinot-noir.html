@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024 Pinot Noir — Technical Sheet | Mander Wines</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: letter landscape;
+            margin: 0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Raleway', 'Helvetica Neue', sans-serif;
+            color: #3D3225;
+            background: #fff;
+            -webkit-font-smoothing: antialiased;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .sheet {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 48px 56px;
+        }
+
+        /* Header */
+        .sheet-header {
+            text-align: center;
+            margin-bottom: 36px;
+            padding-bottom: 28px;
+            border-bottom: 2px solid #3D3225;
+        }
+
+        .sheet-logo {
+            height: 72px;
+            margin: 0 auto 20px;
+        }
+
+        .sheet-title {
+            font-family: 'Raleway', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #3D3225;
+        }
+
+        /* Two columns */
+        .sheet-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+
+        .section-title {
+            font-family: 'Raleway', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #3D3225;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #E0D8CC;
+        }
+
+        .section-content {
+            margin-bottom: 28px;
+        }
+
+        .section-content p {
+            font-size: 13px;
+            line-height: 1.75;
+            color: #5A4D3E;
+        }
+
+        /* Specs table */
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 28px;
+        }
+
+        .specs-table tr {
+            border-bottom: 1px solid #F0EBE3;
+        }
+
+        .specs-table td {
+            padding: 8px 0;
+            font-size: 13px;
+            vertical-align: top;
+        }
+
+        .specs-table td:first-child {
+            font-weight: 600;
+            color: #3D3225;
+            width: 140px;
+            letter-spacing: 0.02em;
+        }
+
+        .specs-table td:last-child {
+            color: #5A4D3E;
+        }
+
+        /* Tasting grid */
+        .tasting-grid {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 28px;
+        }
+
+        .tasting-item {
+            text-align: center;
+        }
+
+        .tasting-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(184, 150, 78, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 6px;
+            font-size: 16px;
+        }
+
+        .tasting-name {
+            font-size: 12px;
+            font-weight: 500;
+            color: #3D3225;
+        }
+
+        /* Founder note */
+        .founder-note {
+            background: #FAF7F2;
+            padding: 20px 24px;
+            border-left: 3px solid #B8964E;
+            margin-bottom: 28px;
+        }
+
+        .founder-note p {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 15px;
+            font-style: italic;
+            line-height: 1.7;
+            color: #5A4D3E;
+        }
+
+        .founder-note .attribution {
+            font-family: 'Raleway', sans-serif;
+            font-style: normal;
+            font-size: 12px;
+            font-weight: 600;
+            color: #3D3225;
+            margin-top: 8px;
+            letter-spacing: 0.05em;
+        }
+
+        /* Footer */
+        .sheet-footer {
+            margin-top: 32px;
+            padding-top: 20px;
+            border-top: 2px solid #3D3225;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sheet-footer-badges {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .badge {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #7A6E60;
+            padding: 4px 12px;
+            border: 1px solid #E0D8CC;
+        }
+
+        .sheet-footer-info {
+            text-align: right;
+            font-size: 11px;
+            color: #7A6E60;
+            line-height: 1.6;
+        }
+
+        /* Print button (hidden in print) */
+        .print-bar {
+            background: #3D3225;
+            padding: 16px 0;
+            text-align: center;
+        }
+
+        .print-bar button {
+            background: #B8964E;
+            color: #fff;
+            border: none;
+            padding: 12px 36px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin: 0 8px;
+        }
+
+        .print-bar button:hover {
+            background: #D4B06A;
+        }
+
+        .print-bar a {
+            color: rgba(255,255,255,0.6);
+            font-size: 13px;
+            text-decoration: none;
+            margin-left: 24px;
+        }
+
+        @media print {
+            .print-bar { display: none; }
+            body { background: #fff; }
+            .sheet { padding: 32px 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="print-bar">
+        <button onclick="window.print()">Save as PDF / Print</button>
+        <a href="../wine.html">&larr; Back to The Wine</a>
+    </div>
+
+    <div class="sheet">
+
+        <!-- Header -->
+        <div class="sheet-header">
+            <img src="../images/logo-adj.png" alt="Mander Wines" class="sheet-logo">
+            <p class="sheet-title">2024 Pinot Noir &nbsp;|&nbsp; Laundry Vineyard</p>
+        </div>
+
+        <!-- Body -->
+        <div class="sheet-body">
+
+            <!-- Left Column -->
+            <div>
+                <h3 class="section-title">Viticulture &amp; Provenance</h3>
+                <div class="section-content">
+                    <table class="specs-table">
+                        <tr><td>Harvest Date</td><td>September 20, 2024</td></tr>
+                        <tr><td>Location</td><td>Laundry Vineyard, Lincoln Lakeshore VQA</td></tr>
+                        <tr><td>Appellation</td><td>VQA Lincoln Lakeshore</td></tr>
+                        <tr><td>Method</td><td>Handpicked, fruit-sorted</td></tr>
+                    </table>
+                </div>
+
+                <h3 class="section-title">Vinification &amp; Aging</h3>
+                <div class="section-content">
+                    <p>Handpicked on September 20, 2024, and gently fruit-sorted, this small-lot Pinot Noir showcases a fruit-forward profile. Aged 10 months in French oak, the wine reveals a harmonious integration of bright fruit and delicate oak complexity. Each barrel carefully monitored to preserve the vineyard's natural expression.</p>
+                </div>
+
+                <h3 class="section-title">Founder's Note</h3>
+                <div class="founder-note">
+                    <p>&ldquo;As a first-generation born and raised Ontarian, I've always felt the pull of two worlds. Wine was a symbol of celebration, connection, and tradition. Every bottle is a bridge between where I come from and the land that raised me.&rdquo;</p>
+                    <p class="attribution">&mdash; Jasneet Mander, Founder &amp; Vintner</p>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div>
+                <h3 class="section-title">Tasting Profile</h3>
+                <div class="section-content">
+                    <p>Vibrant notes of cherry and strawberry, layered with subtle hints of soft spice. Medium-bodied with a silky texture, the wine is elegantly structured and lingers with a long finish.</p>
+                </div>
+
+                <div class="tasting-grid">
+                    <div class="tasting-item">
+                        <div class="tasting-icon">&#127826;</div>
+                        <span class="tasting-name">Cherry</span>
+                    </div>
+                    <div class="tasting-item">
+                        <div class="tasting-icon">&#127827;</div>
+                        <span class="tasting-name">Strawberry</span>
+                    </div>
+                    <div class="tasting-item">
+                        <div class="tasting-icon">&#10022;</div>
+                        <span class="tasting-name">Soft Spice</span>
+                    </div>
+                </div>
+
+                <h3 class="section-title">Technical Specifications</h3>
+                <div class="section-content">
+                    <table class="specs-table">
+                        <tr><td>Varietal</td><td>Pinot Noir</td></tr>
+                        <tr><td>Vintage</td><td>2024</td></tr>
+                        <tr><td>Alcohol</td><td>13.0% alc./vol.</td></tr>
+                        <tr><td>Aging</td><td>10 months in French oak</td></tr>
+                        <tr><td>Production</td><td>100 Cases</td></tr>
+                        <tr><td>Volume</td><td>750 mL</td></tr>
+                        <tr><td>Certification</td><td>Canada Organic</td></tr>
+                        <tr><td>Classification</td><td>VQA Ontario</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="sheet-footer">
+            <div class="sheet-footer-badges">
+                <span class="badge">VQA Ontario</span>
+                <span class="badge">Canada Organic</span>
+            </div>
+            <div class="sheet-footer-info">
+                Mander Wines Ltd.<br>
+                manderwines.com &nbsp;|&nbsp; @manderwines
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
