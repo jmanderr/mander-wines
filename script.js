@@ -117,6 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="success-modal-icon">&#10003;</div>
                 <h2>${heading}</h2>
                 <p>${message}</p>
+                <p style="font-size: 0.85em; opacity: 0.75; margin-top: 12px;">Please check your junk or spam folder if you don't see our email.</p>
                 <p class="success-modal-signature"><em>&mdash; The Mander Wines Team</em></p>
                 <button class="btn btn-gold success-modal-close">Close</button>
             </div>
@@ -258,6 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </form>
                         <div class="exit-success" id="exit-success">
                             <p>Welcome to the Mander Family.</p>
+                            <p style="font-size: 0.85em; opacity: 0.75; margin-top: 8px;">Please check your junk or spam folder if you don't see our email.</p>
                         </div>
                     </div>
                 `;
