@@ -29,3 +29,14 @@ credentials.json
 
 # Logs
 *.log
+
+# Private business files
+Outreach/
+Logo/
+instagram-posts/
+
+# Raw/working image files
+*.HEIC
+*.tiff
+*.pdf
+images/logo-*.png
