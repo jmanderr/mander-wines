@@ -237,6 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.addEventListener('mouseout', (e) => {
             if (exitTriggered || suppressExitPopup) return;
+            if (ageGate && !ageGate.classList.contains('hidden')) return;
             if (e.clientY < 5 && e.relatedTarget === null) {
                 exitTriggered = true;
                 sessionStorage.setItem('mander-exit-shown', 'true');
